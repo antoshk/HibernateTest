@@ -2,6 +2,7 @@ package com.gmail.shelkovich.anton.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -21,7 +22,7 @@ public class Guest implements Serializable {
     private String email;
 
     @ManyToMany(mappedBy = "guests", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    private Set<Room> rooms;
+    private Set<Room> rooms = new HashSet<>();
 
     @Override
     public String toString() {
