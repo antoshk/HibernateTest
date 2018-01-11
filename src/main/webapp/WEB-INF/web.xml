@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+
+	<servlet>
+		<servlet-name>MainPageServlet</servlet-name>
+		<servlet-class>com.gmail.shelkovich.anton.servlets.MainPageServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>FilterServlet</servlet-name>
+		<servlet-class>com.gmail.shelkovich.anton.servlets.FilterServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>GenerateServlet</servlet-name>
+		<servlet-class>com.gmail.shelkovich.anton.servlets.GenerateServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>GuestFilterServlet</servlet-name>
+		<servlet-class>com.gmail.shelkovich.anton.servlets.GuestFilterServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MainPageServlet</servlet-name>
+		<url-pattern/>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>FilterServlet</servlet-name>
+		<url-pattern>/filter</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GenerateServlet</servlet-name>
+		<url-pattern>/generate</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GuestFilterServlet</servlet-name>
+		<url-pattern>/guestfilter</url-pattern>
+	</servlet-mapping>
+
+</web-app>
